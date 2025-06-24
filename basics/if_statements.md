@@ -33,3 +33,45 @@ OPERATORS WE CAN PUT INTO
 - -x FILE	FILE exists and the execute permission is granted.
 
  **NOTE:= is slightly different to -eq. [ 001 = 1 ] will return false as = does a string comparison (ie. character for character the same) whereas -eq does a numerical comparison meaning [ 001 -eq 1 ] will return true**
+
+### NESETED IF
+```bash
+#!/bin/bash
+# Nested if statements
+if [ $1 -gt 100 ]
+then
+echo Hey that\'s a large number.
+if (( $1 % 2 == 0 ))
+then
+echo And is also an even number.
+fi
+fi
+```
+### IF-ELSE 
+```bash
+
+if [$# -eq 1]
+else.sh
+#!/bin/bash
+# else example
+if [ $# -eq 1 ]
+then
+nl $1
+else
+nl /dev/stdin
+fi
+```
+### IF - ELIF - ELSE
+```bash
+if [ <some test> ]
+then
+<commands>
+elif [ <some test> ]
+then
+<different commands>
+else
+<other commands>
+fi
+```
+-- Bollean operator is also allowed 
+
